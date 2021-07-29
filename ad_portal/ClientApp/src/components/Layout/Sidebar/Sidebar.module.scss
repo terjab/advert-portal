@@ -1,0 +1,17 @@
+@import '../../../styles/settings';
+@import '../../../styles/mixins';
+
+.sidebar {
+  position: fixed;
+  top: 5.4rem;
+  left: 0;
+  width: rem-calc(345);
+  padding: 2rem;
+  z-index: 11;
+  bottom: 0;
+  overflow: scroll;
+}
+
+.clicked {
+  font-weight: 700;
+}

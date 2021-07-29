@@ -1,0 +1,6 @@
+@import '../../styles/settings';
+@import '../../styles/mixins';
+
+.container {
+  composes: container from '../Forms/HelpSelection/HelpSelection.module.scss'
+}

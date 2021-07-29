@@ -1,0 +1,71 @@
+@import '../settings';
+@import '../mixins';
+
+.row {
+  // text-align: center;
+  & > * {
+    color: $primary-color;
+    margin-right: 0.5rem;
+  }
+}
+
+.back {
+  @include reset-button;
+  position: absolute;
+  left: 3rem;
+}
+
+.favourite {
+  stroke: $primary-color;
+  width: 20px;
+  height: 20px;
+   &:hover {
+     fill: $primary-color;
+   }
+}
+
+.gallery {
+  max-width: rem-calc(400);
+  margin: auto;
+  :global(.image-gallery-icon) {
+    svg {
+      height: rem-calc(55);
+      stroke: rgba($white, 0.7)
+    }
+  }
+}
+
+.container {
+  background-color: rgb(230, 228, 252);
+  border-radius: $global-radius;
+  padding: 3rem;
+}
+
+.info-row {
+  background-color: rgb(240, 238, 253);
+  border-radius: 6;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  .price {
+    font-weight: 600;
+    font-size: rem-calc(18);
+    color: rgba($black, 0.6)
+  }
+  .info-item {
+    color: rgba($black, 0.3);
+    font-weight: 500;
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.specifications {
+  display: block;
+}
+
+.param {
+    font-weight: 600;
+}

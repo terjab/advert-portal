@@ -1,0 +1,8 @@
+@import '../../../styles/settings';
+@import '../../../styles/mixins';
+
+.tooltip {
+  a {
+    width: rem-calc(100) !important;
+  }
+}

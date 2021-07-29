@@ -1,0 +1,21 @@
+@import '../../../styles/settings';
+@import '../../../styles/mixins';
+
+.badge {
+  background-color: $white;
+  padding: 0.2rem 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 6px;
+  button {
+    display: inline !important;
+    margin-right: 0.5rem;
+    &:hover {
+      svg {
+        & > * {
+          stroke: $primary-color;
+        }
+      }
+    }
+  }
+}

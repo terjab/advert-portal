@@ -1,0 +1,42 @@
+@import '../../styles/settings';
+@import '../../styles/mixins';
+
+.container {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.ad {
+  @include reset-button;
+  max-width: rem-calc(260);
+  overflow: hidden;
+  border-radius: $global-radius;
+  &:hover {
+    .img {
+      transform: scale(1.05);
+      transition: transform 0.3s;  
+      border-radius: 20px;
+    }
+  }
+}
+
+.img {
+  border-radius: $global-radius;
+  max-width: rem-calc(240);
+  height: rem-calc(200);
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: $secondary-color;
+}
+
+.text {
+  // text-align: left;
+}
+
+.price {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}

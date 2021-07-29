@@ -1,0 +1,27 @@
+@import '../../styles/settings';
+@import '../../styles/mixins';
+
+.container {
+  composes: container from '../Forms/HelpSelection/HelpSelection.module.scss'
+}
+
+.width {
+  max-width: rem-calc(300);
+  button {
+    height: fit-content;
+    margin-top: 1.4rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.link {
+  display: block;
+}
+
+.result {
+  margin-bottom: 1rem;
+  img {
+    border-radius: $global-radius;
+    margin-right: 1rem;
+  }
+}

@@ -1,0 +1,109 @@
+@import './global/global-utils';
+
+/* --------------
+- Global
+----------------- */
+$global-width: rem-calc(1420);
+$global-lineheight: 1.65;
+$global-radius: rem-calc(13);
+$global-gap: 1.875rem;
+$global-gap-small: 1.875rem;
+
+/* --------------
+- Breakpoints
+----------------- */
+$breakpoint-small: 0;
+$breakpoint-medium: 640px;
+$breakpoint-large: 1200px;
+
+/* --------------
+- Colors
+----------------- */
+$primary-color: #2b66b4;
+$secondary-color: #b546fc;
+$black: black;
+$white: #fff;
+$light-gray: rgba(0, 0, 0, 0.3);
+$medium-gray: rgba(0, 0, 0, 0.6);
+$dark-gray: #44444462;
+$alert-color: #e05b5b;
+$success-color: #4c915c;
+$body-color: rgba(0, 0, 0, 0.6);
+$body-background: $white;
+$box-shadow: 0px 15px 50px rgba(47, 51, 69, 0.1);
+
+/* --------------
+- Typography
+----------------- */
+$body-font-family: 'Poppins', sans-serif;
+$header-color: $primary-color;
+$header-font-family: 'Poppins', sans-serif;
+$header-font-weight: 700;
+$header-lineheight: 1.4;
+$header-h1-fontsize: (
+  'large': 58,
+  'medium': 58,
+  'small': 36,
+);
+$header-h2-fontsize: (
+  'large': 46,
+  'medium': 46,
+  'small': 26,
+);
+$header-h3-fontsize: (
+  'large': 32,
+  'medium': 32,
+  'small': 26,
+);
+$header-h4-fontsize: (
+  'large': 28,
+  'medium': 28,
+  'small': 24,
+);
+$header-h5-fontsize: (
+  'large': 22,
+  'medium': 22,
+  'small': 20,
+);
+$header-h6-fontsize: (
+  'large': 18,
+  'medium': 18,
+  'small': 16,
+);
+
+/* --------------
+- Helper mixins and function
+----------------- */
+@mixin large {
+  @media screen and (min-width: #{$breakpoint-large}) {
+    @content;
+  }
+}
+@mixin medium {
+  @media screen and (min-width: #{$breakpoint-medium}) {
+    @content;
+  }
+}
+@mixin medium-only {
+  @media screen and (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-large - 1px}) {
+    @content;
+  }
+}
+@mixin medium-down {
+  @media screen and (max-width: #{$breakpoint-large}) {
+    @content;
+  }
+}
+@mixin small-only {
+  @media screen and (max-width: #{$breakpoint-medium - 1px}) {
+    @content;
+  }
+}
+
+/* --------------
+- Hovers
+----------------- */
+@mixin primary-hover {
+  background-color: rgba($primary-color, 0.8);
+  transition: background-color 0.3s;
+}

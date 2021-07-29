@@ -1,0 +1,13 @@
+@import '../../../styles/settings';
+@import '../../../styles/mixins';
+
+.container {
+  background-color: rgb(230, 228, 252);
+  border-radius: $global-radius;
+  padding: 3rem;
+}
+
+.submit {
+  margin-top: 2rem;
+  width: 100%;
+}

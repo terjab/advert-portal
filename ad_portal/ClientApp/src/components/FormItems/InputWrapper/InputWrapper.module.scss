@@ -1,0 +1,65 @@
+@import '../../../styles/settings';
+@import '../../../styles/mixins';
+
+.wrapper {
+  position: relative;
+  max-width: 100%;
+
+  &.is-invalid {
+    input[type='text'],
+    input[type='number'],
+    input[type='email'],
+    input[type='tel'],
+    input[type='password'],
+    textarea,
+    input[type='checkbox'] + span,
+    input[type='radio'] + span,
+    :global(.css-yk16xz-control) {
+      border-color: $alert-color !important;
+      background-color: rgba($alert-color, 0.05);
+    }
+  }
+
+  :global(.css-2b097c-container) {
+    & + .error {
+      bottom: 110%;
+    }
+  }
+
+  textarea {
+    & + .error {
+      bottom: 82%;
+    }
+  }
+
+  :global(.InputWrapper_wrapper__GJqF4) {
+    .error {
+      bottom: 100% !important;
+    }
+  }
+}
+
+.time {
+  width: 100px;
+}
+
+.note {
+  font-size: 0.875rem;
+  color: $black;
+  text-align: right;
+  margin-top: 0.125rem;
+}
+
+.error {
+  position: absolute;
+  right: 0;
+  bottom: 70%;
+  background-color: $primary-color;
+  font-size: rem-calc(14);
+  color: $white;
+  padding: 0 0.5rem;
+  border-radius: $global-radius;
+  font-weight: 500;
+  z-index: 9;
+  @include transition((opacity, bottom), '.3');
+}

@@ -1,0 +1,27 @@
+@import '../../styles/settings';
+@import '../../styles/mixins';
+
+.search {
+  display: flex;
+  width: 100%;
+  input {
+    border: none;
+    border-bottom: 1px solid $light-gray
+  }
+}
+
+.search-button {
+  @include reset-button;
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  svg {
+    fill: $light-gray;
+  }
+  &:hover {
+    svg {
+      fill: $primary-color;
+      transition: 0.3s fill;
+    }
+  }
+}

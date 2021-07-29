@@ -1,0 +1,13 @@
+@import '../../../../styles/settings';
+@import '../../../../styles/mixins';
+
+.wrapper {
+  position: relative;
+}
+
+.input {
+  border: 1px solid rgba($black, 0.2);
+  border-radius: 6px !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}

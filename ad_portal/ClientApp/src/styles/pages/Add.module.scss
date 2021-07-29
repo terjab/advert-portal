@@ -1,0 +1,28 @@
+@import '../settings';
+@import '../mixins';
+
+.blue-box {
+  composes: container from './Detail.module.scss'
+}
+
+.photo {
+  border-radius: $global-radius;
+  width: rem-calc(200);
+  height: rem-calc(200);
+  object-fit: cover;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.notify {
+  background-color: rgba($success-color, 0.8);
+  padding: 0.2rem 2rem;
+  color: $white;
+  font-size: 1.2rem;
+  display: inline;
+  float: left;
+  border-radius: $global-radius;
+  position: absolute;
+  bottom: 12rem;
+  right: 9rem;
+}

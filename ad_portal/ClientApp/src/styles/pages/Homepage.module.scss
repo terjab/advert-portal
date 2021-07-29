@@ -1,0 +1,9 @@
+@import '../settings';
+@import '../mixins';
+
+.box-container {
+  max-width: rem-calc(200);
+  width: 100%;
+  overflow: hidden;
+  border-radius: $global-radius;
+}

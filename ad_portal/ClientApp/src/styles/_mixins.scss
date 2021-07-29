@@ -1,0 +1,28 @@
+@mixin reset-button {
+  border: none;
+  background-color: transparent;
+  display: block;
+  width: auto;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin focus($size: 2px, $alfa: 0.5) {
+  &:focus {
+    box-shadow: 0 0 0 $size rgba($primary-color, $alfa) !important;
+  }
+}
+
+@mixin transition($properties, $duration) {
+  $props: ();
+  $duration: unquote($duration);
+
+  @each $p in $properties {
+    $props: append($props, $p $duration, comma);
+  }
+
+  -moz-transition: $props;
+  -webkit-transition: $props;
+  -o-transition: $props;
+  transition: $props;
+}
