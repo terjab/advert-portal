@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form, Formik, Field } from 'formik';
 import * as Yup from 'yup';
 import Select from "react-select";
-
-import { fileToBase64 } from '../../../services/utils';
 
 import style from './NewAdd.module.scss';
 

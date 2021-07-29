@@ -12,20 +12,6 @@ export const classes = (classString, classes) => {
     }${classesList.join(' ')}`;
 };
 
-export const fileToBase64 = (img) => {
-  var reader = new FileReader();
-  reader.readAsDataURL(img);
-  const x = URL.createObjectURL(img);
-  return x;
-};
-
-let lastId = 0;
-
-export const newId = (prefix = 'id') => {
-  lastId++;
-  return lastId.toString();
-};
-
 export const createQuery = (q) => {
   let query;
 

@@ -17,7 +17,6 @@ export const Topbar = ({ handleSearch }) => {
       <div className="h-display-flex h-width-100 h-space-between">
         <button onClick={() => history.push(routes.NEW_ADD)} className={style['add-button']}>
           <PlusIcon className="h-mr-1" />
-          {/* <img src='/icons/plus.png' width="18" height="18" alt="plus"  /> */}
           Přidat inzerát
         </button>
         <div className={classes([[style.search]])}>

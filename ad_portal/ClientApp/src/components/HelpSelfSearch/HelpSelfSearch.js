@@ -39,11 +39,18 @@ export const HelpSelfSearch = ({ handleGoBack }) => {
     setModel(e)
   }
 
-  const transformTitle = (title = ' Vyhledávání „amd ryzen 5 2500“ – Heureka.cz') => {
-    const splitLeft = title.split('„')
-    const splitRight = splitLeft[1].split('“');
+    const transformTitle = (title = ' Vyhledávání „amd ryzen 5 2500“ – Heureka.cz') => {
+        if (title) {
+            const splitLeft = title.split('„')
+            if (splitLeft[1]) {
+                const splitRight = splitLeft[1] && splitLeft[1].split('“');
+                return splitRight[0].charAt(0).toUpperCase() + splitRight[0].slice(1);
+            } else {
+                return "Výsledek - heureka.cz"
+            }
 
-    return splitRight[0].charAt(0).toUpperCase() + splitRight[0].slice(1);
+        }
+
   }
 
   const goBack = () => handleGoBack();
